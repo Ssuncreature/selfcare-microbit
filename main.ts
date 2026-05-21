@@ -9,3 +9,11 @@ if (GoalB > 2) {
     GoalB = 0
 }
 
+input.onButtonPressed(Button.A, function on_button_pressed_a() {
+    
+    GoalA = GoalA + 1
+})
+input.onButtonPressed(Button.B, function on_button_pressed_b() {
+    
+    GoalB = GoalB + 1
+})
