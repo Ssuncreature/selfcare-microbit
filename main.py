@@ -1,18 +1,24 @@
+# Load Variables
 GoalA = 0
 GoalB = 0
+Overall = 0
 
+# Add to goal
 def on_button_pressed_a():
+    global GoalA
     if GoalA < 3:
-        global GoalA
         GoalA = GoalA + 1
 input.on_button_pressed(Button.A, on_button_pressed_a)
+
 def on_button_pressed_b():
+    global GoalB
     if GoalB < 2:
-        global GoalB
         GoalB = GoalB + 1
 input.on_button_pressed(Button.B, on_button_pressed_b)
 
+# Progress Bar
 def on_forever():
+    global Overall
     Overall = GoalA + GoalB
     if Overall == 5:
         led.plot(4, 4)

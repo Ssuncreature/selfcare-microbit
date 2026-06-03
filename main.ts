@@ -1,21 +1,26 @@
+//  Load Variables
 let GoalA = 0
 let GoalB = 0
+let Overall = 0
+//  Add to goal
 input.onButtonPressed(Button.A, function on_button_pressed_a() {
+    
     if (GoalA < 3) {
-        
         GoalA = GoalA + 1
     }
     
 })
 input.onButtonPressed(Button.B, function on_button_pressed_b() {
+    
     if (GoalB < 2) {
-        
         GoalB = GoalB + 1
     }
     
 })
+//  Progress Bar
 basic.forever(function on_forever() {
-    let Overall = GoalA + GoalB
+    
+    Overall = GoalA + GoalB
     if (Overall == 5) {
         led.plot(4, 4)
     }
