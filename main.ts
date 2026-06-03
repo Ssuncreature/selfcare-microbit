@@ -2,6 +2,16 @@
 let GoalA = 0
 let GoalB = 0
 let Overall = 0
+//  Load Character
+led.plot(1, 0)
+led.plot(2, 0)
+led.plot(3, 0)
+led.plot(0, 1)
+led.plot(2, 1)
+led.plot(4, 1)
+led.plot(1, 2)
+led.plot(2, 2)
+led.plot(3, 2)
 //  Add to goal
 input.onButtonPressed(Button.A, function on_button_pressed_a() {
     

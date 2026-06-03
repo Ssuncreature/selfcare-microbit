@@ -3,6 +3,17 @@ GoalA = 0
 GoalB = 0
 Overall = 0
 
+# Load Character
+led.plot(1, 0)
+led.plot(2, 0)
+led.plot(3, 0)
+led.plot(0, 1)
+led.plot(2, 1)
+led.plot(4, 1)
+led.plot(1, 2)
+led.plot(2, 2)
+led.plot(3, 2)
+
 # Add to goal
 def on_button_pressed_a():
     global GoalA
