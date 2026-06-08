@@ -52,3 +52,16 @@ basic.forever(function on_forever() {
     }
     
 })
+//  blinking
+control.inBackground(function on_in_background() {
+    // 5 seconds between blinks
+    basic.forever(function on_forever2() {
+        led.toggle(1, 1)
+        led.toggle(3, 1)
+        //  half a second eyes closed
+        control.waitMicros(500000)
+        led.toggle(1, 1)
+        led.toggle(3, 1)
+        control.waitMicros(5000000)
+    })
+})
