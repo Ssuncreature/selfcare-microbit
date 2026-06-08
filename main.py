@@ -42,3 +42,17 @@ def on_forever():
     if Overall >= 1:
         led.plot(0, 4)
 basic.forever(on_forever)
+
+# blinking
+def on_in_background():  
+    def on_forever2():
+        led.toggle(1, 1)
+        led.toggle(3, 1)
+        # half a second eyes closed
+        control.wait_micros(500000)
+        led.toggle(1, 1)
+        led.toggle(3, 1)
+        control.wait_micros(5000000)
+        #5 seconds between blinks
+    basic.forever(on_forever2)   
+control.in_background(on_in_background)
