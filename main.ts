@@ -65,3 +65,15 @@ control.inBackground(function on_in_background() {
         control.waitMicros(5000000)
     })
 })
+//  daily reset
+
+timeanddate.onDayChanged(function on_day_changed() {
+    let GoalA = 0
+    let GoalB = 0
+    let Overall = 0
+    led.unplot(0, 4)
+    led.unplot(1, 4)
+    led.unplot(2, 4)
+    led.unplot(3, 4)
+    led.unplot(4, 4)
+})

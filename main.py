@@ -56,3 +56,16 @@ def on_in_background():
         #5 seconds between blinks
     basic.forever(on_forever2)   
 control.in_background(on_in_background)
+
+# daily reset
+def on_day_changed():
+    GoalA = 0
+    GoalB = 0
+    Overall = 0
+    led.unplot(0, 4)
+    led.unplot(1, 4)
+    led.unplot(2, 4)
+    led.unplot(3, 4)
+    led.unplot(4, 4)
+pass
+timeanddate.on_day_changed(on_day_changed)
