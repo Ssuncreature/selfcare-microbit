@@ -5,7 +5,8 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "Self Care MicroBit": "github:Ssuncreature/self-care-microbit#fdf60f9dff559eda87340c4264dcecaa2d23ce69"
+        "Self Care MicroBit": "github:Ssuncreature/self-care-microbit#fdf60f9dff559eda87340c4264dcecaa2d23ce69",
+        "datalogger": "*"
     },
     "files": [
         "main.blocks",

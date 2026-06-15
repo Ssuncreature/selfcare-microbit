@@ -19,12 +19,18 @@ def on_button_pressed_a():
     global GoalA
     if GoalA < 3:
         GoalA = GoalA + 1
+        datalogger.delete_log()
+        datalogger.log(datalogger.create_cv("A", GoalA),
+            datalogger.create_cv("B", GoalB))
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
 def on_button_pressed_b():
     global GoalB
     if GoalB < 2:
         GoalB = GoalB + 1
+        datalogger.delete_log()
+        datalogger.log(datalogger.create_cv("A", GoalA),
+            datalogger.create_cv("B", GoalB))
 input.on_button_pressed(Button.B, on_button_pressed_b)
 
 # Progress Bar

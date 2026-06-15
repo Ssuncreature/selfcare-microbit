@@ -17,6 +17,8 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
     
     if (GoalA < 3) {
         GoalA = GoalA + 1
+        datalogger.deleteLog()
+        datalogger.log(datalogger.createCV("A", GoalA), datalogger.createCV("B", GoalB))
     }
     
 })
@@ -24,6 +26,8 @@ input.onButtonPressed(Button.B, function on_button_pressed_b() {
     
     if (GoalB < 2) {
         GoalB = GoalB + 1
+        datalogger.deleteLog()
+        datalogger.log(datalogger.createCV("A", GoalA), datalogger.createCV("B", GoalB))
     }
     
 })
