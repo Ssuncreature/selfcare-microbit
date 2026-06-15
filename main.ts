@@ -70,6 +70,7 @@ control.inBackground(function on_in_background() {
     })
 })
 //  daily reset
+//  theoretically should work
 
 timeanddate.onDayChanged(function on_day_changed() {
     let GoalA = 0
@@ -80,4 +81,5 @@ timeanddate.onDayChanged(function on_day_changed() {
     led.unplot(2, 4)
     led.unplot(3, 4)
     led.unplot(4, 4)
+    datalogger.deleteLog()
 })

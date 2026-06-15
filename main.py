@@ -64,6 +64,7 @@ def on_in_background():
 control.in_background(on_in_background)
 
 # daily reset
+# theoretically should work
 def on_day_changed():
     GoalA = 0
     GoalB = 0
@@ -73,5 +74,6 @@ def on_day_changed():
     led.unplot(2, 4)
     led.unplot(3, 4)
     led.unplot(4, 4)
+    datalogger.delete_log()
 pass
 timeanddate.on_day_changed(on_day_changed)
