@@ -2,6 +2,7 @@
 let GoalA = 0
 let GoalB = 0
 let Overall = 0
+let Time = "null"
 //  Load Character
 led.plot(1, 0)
 led.plot(2, 0)
@@ -14,11 +15,12 @@ led.plot(2, 2)
 led.plot(3, 2)
 //  Add to goal
 input.onButtonPressed(Button.A, function on_button_pressed_a() {
+    let Time: string;
     
     if (GoalA < 3) {
         GoalA = GoalA + 1
-        datalogger.deleteLog()
-        datalogger.log(datalogger.createCV("A", GoalA), datalogger.createCV("B", GoalB))
+        Time = timeanddate.dateTime()
+        datalogger.log(datalogger.createCV("A", GoalA), datalogger.createCV("B", GoalB), datalogger.createCV("Time", Time))
     }
     
 })
@@ -26,8 +28,7 @@ input.onButtonPressed(Button.B, function on_button_pressed_b() {
     
     if (GoalB < 2) {
         GoalB = GoalB + 1
-        datalogger.deleteLog()
-        datalogger.log(datalogger.createCV("A", GoalA), datalogger.createCV("B", GoalB))
+        datalogger.log(datalogger.createCV("A", GoalA), datalogger.createCV("B", GoalB), datalogger.createCV("Time", Time))
     }
     
 })
@@ -80,5 +81,7 @@ timeanddate.onDayChanged(function on_day_changed() {
     led.unplot(2, 4)
     led.unplot(3, 4)
     led.unplot(4, 4)
+})
+datalogger.onLogFull(function on_log_full() {
     datalogger.deleteLog()
 })

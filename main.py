@@ -2,6 +2,8 @@
 GoalA = 0
 GoalB = 0
 Overall = 0
+Time = "null"
+
 # Load Character
 led.plot(1, 0)
 led.plot(2, 0)
@@ -18,9 +20,10 @@ def on_button_pressed_a():
     global GoalA
     if GoalA < 3:
         GoalA = GoalA + 1
-        datalogger.delete_log()
+        Time = timeanddate.date_time()
         datalogger.log(datalogger.create_cv("A", GoalA),
-            datalogger.create_cv("B", GoalB)
+            datalogger.create_cv("B", GoalB),
+            datalogger.create_cv("Time", Time)
             )
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
@@ -28,9 +31,9 @@ def on_button_pressed_b():
     global GoalB
     if GoalB < 2:
         GoalB = GoalB + 1
-        datalogger.delete_log()
         datalogger.log(datalogger.create_cv("A", GoalA),
-                datalogger.create_cv("B", GoalB)
+                datalogger.create_cv("B", GoalB),
+                datalogger.create_cv("Time", Time)
                 )
 input.on_button_pressed(Button.B, on_button_pressed_b)
 
@@ -75,6 +78,8 @@ def on_day_changed():
     led.unplot(2, 4)
     led.unplot(3, 4)
     led.unplot(4, 4)
-    datalogger.delete_log()
 timeanddate.on_day_changed(on_day_changed)
 
+def on_log_full():
+    datalogger.delete_log()
+datalogger.on_log_full(on_log_full)
