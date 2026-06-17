@@ -17,6 +17,8 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
     
     if (GoalA < 3) {
         GoalA = GoalA + 1
+        datalogger.deleteLog()
+        datalogger.log(datalogger.createCV("A", GoalA), datalogger.createCV("B", GoalB))
     }
     
 })
@@ -24,6 +26,8 @@ input.onButtonPressed(Button.B, function on_button_pressed_b() {
     
     if (GoalB < 2) {
         GoalB = GoalB + 1
+        datalogger.deleteLog()
+        datalogger.log(datalogger.createCV("A", GoalA), datalogger.createCV("B", GoalB))
     }
     
 })
@@ -64,4 +68,17 @@ control.inBackground(function on_in_background() {
         led.toggle(3, 1)
         control.waitMicros(5000000)
     })
+})
+//  daily reset
+//  theoretically should work - this one is the rudimentary one
+timeanddate.onDayChanged(function on_day_changed() {
+    let GoalA = 0
+    let GoalB = 0
+    let Overall = 0
+    led.unplot(0, 4)
+    led.unplot(1, 4)
+    led.unplot(2, 4)
+    led.unplot(3, 4)
+    led.unplot(4, 4)
+    datalogger.deleteLog()
 })
