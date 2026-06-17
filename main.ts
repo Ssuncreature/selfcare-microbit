@@ -70,8 +70,7 @@ control.inBackground(function on_in_background() {
     })
 })
 //  daily reset
-//  theoretically should work
-
+//  theoretically should work - this one is the rudimentary one
 timeanddate.onDayChanged(function on_day_changed() {
     let GoalA = 0
     let GoalB = 0
