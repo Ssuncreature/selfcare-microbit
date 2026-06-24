@@ -1,22 +1,27 @@
 
 > Open this page at [https://ssuncreature.github.io/selfcare-microbit/](https://ssuncreature.github.io/selfcare-microbit/)
 
-## Use as Extension
+## How to use
 
-This repository can be added as an **extension** in MakeCode.
+This tool is to be used for self-maintenance, designed to encourage a routine.
+To download, activate the micro:bit and plug it into your device. Open the download link [here}(https://makecode.microbit.org/S78943-43328-22071-03653)
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/ssuncreature/selfcare-microbit** and import
+^--- if you don't trust hyperlinks: https://makecode.microbit.org/S78943-43328-22071-03653
 
-## Edit this project
+from there, simply click download and follow the instructions!
 
-To edit this repository in MakeCode.
+#### Controls
+Log goal A: A
+Log goal B: B
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/ssuncreature/selfcare-microbit** and click import
+### Suggested goal meanings: 
+
+Goal A (Three entries) - Meals/Food
+Goal B (Two entries) - Brushing teeth/washing face
+
+### Hardware specifications
+
+This code is designed to be used via MakeCode on a micro:bitV2, and is not compatible with micro:bitV1 due to certain code portions.
 
 #### Metadata (used for search, rendering)
 
