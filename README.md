@@ -4,7 +4,7 @@
 ## How to use
 
 This tool is to be used for self-maintenance, designed to encourage a routine.
-To download, activate the micro:bit and plug it into your device. Open the download link [here}(https://makecode.microbit.org/S78943-43328-22071-03653)
+To download, activate the micro:bit and plug it into your device. Open the download link [here](https://makecode.microbit.org/S78943-43328-22071-03653)
 
 ^--- if you don't trust hyperlinks: https://makecode.microbit.org/S78943-43328-22071-03653
 
