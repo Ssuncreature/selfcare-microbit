@@ -17,6 +17,7 @@ Log goal B: B
 ### Suggested goal meanings: 
 
 Goal A (Three entries) - Meals/Food
+
 Goal B (Two entries) - Brushing teeth/washing face
 
 ### Hardware specifications
